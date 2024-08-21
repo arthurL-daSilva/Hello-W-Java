@@ -1,0 +1,12 @@
+Conceitos Básicos de Poo
+
+
+Classe: É uma estrutura que possui as especificações de comprimentos e características dos [objetos].
+
+Objeto: é uma estância de uma [classe] em memória.
+
+Atributo: São as características definidas na [classe](campos).
+
+Método: São as ações definidas em uma [classe].
+
+Estado: São os valores dos atributos em um instante de tempo(mutável).

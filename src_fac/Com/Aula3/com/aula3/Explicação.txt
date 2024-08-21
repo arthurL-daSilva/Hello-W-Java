@@ -1,0 +1,23 @@
+Enumeração: São tipos de dados que restringem 
+seus valores a um numero FINITO de opções.
+
+
+ACESSO A MEMBROS (ATRIBUTO/METODO)
+
+- Atributos:
+    a) é quando usamos um atributo em uma expressão.
+    b) é quando usamos o atributo no lado esquerdo da atribuição. Ex: obj.atributo = 7;
+    c) é quando invocamos um metodo.
+
+MODIFICADORES DE ACESSO
+
+Public: Libera acesso de um membro p/ toda classe. 
+Default(no modifier): Libera acesso para classes do mesmo pacote(mesma pasta)
+Private: Libera acesso para a propria classe apenas.
+Protect: Herança(subclasse) e pacote.
+
+
+Métodos GETTER e SETTER
+
+GETTER: libera acesso de leitura.
+SETTER: libera acesso de escrita.(Na maioria dos casos, NÃO USAR)
