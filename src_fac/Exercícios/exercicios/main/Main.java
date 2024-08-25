@@ -3,6 +3,7 @@ import exercicios.exe1.Pessoa;
 import exercicios.exe2.Estado;
 import exercicios.exe2.Lampada;
 import exercicios.exe4.Cliente;
+import exercicios.exe5.Triangulo;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class Main {
         Churrasco c = new Churrasco();
         Lampada l = new Lampada(Estado.OFF);
         Cliente k = new Cliente("josesvaldo", 1500, 20000);
+        Triangulo t = new Triangulo(4);
 
         System.out.println("Nome: "+p.nome);
         System.out.println("Sexo: "+p.sexo);
