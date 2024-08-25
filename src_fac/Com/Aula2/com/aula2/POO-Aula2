@@ -1,0 +1,19 @@
+Int é um tipo primitivo, todo tipo primitivo possui
+um valor inicial Default(por padrão)
+
+int ---------> 0
+booler ------> False
+char --------> ""
+
+Em uma classe, o valor padão é Null
+
+string ------> null
+
+________________________
+
+Construtores
+
+São estruturas para usar na instancia do objeto.
+Um construtor é executado apenas uma vez e define
+o estado inicial. O construtor possui o mesmo nome
+da classe.
