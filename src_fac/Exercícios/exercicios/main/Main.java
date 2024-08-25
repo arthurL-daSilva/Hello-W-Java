@@ -27,7 +27,7 @@ public class Main {
         System.out.println();
 
         k.checarSaldo();
-        k.sacar(300);
+        k.sacar(22000);
         k.checarSaldo();
         System.out.println("Nome: "+k.obterNome());
         k.depositar(50.59);
