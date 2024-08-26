@@ -14,11 +14,12 @@ public class Cliente {
     public void sacar(double quantia){
         if(saldo > quantia && quantia < limite){
             saldo-=quantia;
-        }
+        }else System.out.println("Você tentou sacar mais que seu limite!");
     }
 
     public void depositar(double quantia){
         saldo+=quantia;
+        if(saldo < limite){limite = saldo;}
     }
 
     public void checarSaldo(){
