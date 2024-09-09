@@ -6,6 +6,7 @@ import exercicios.exe4.Cliente;
 import exercicios.exe5.Triangulo;
 import exercicios.exe6.Enigma;
 import exercicios.exe7.Eq2Grau;
+import exercicios.exe8.Porta;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Main {
         Triangulo t = new Triangulo(4);
         Enigma e = new Enigma(52);
         Eq2Grau s = new Eq2Grau(20, 1, 6);
+        Porta pt = new Porta(false);
         
         System.out.println("Nome: "+p.nome);
         System.out.println("Sexo: "+p.sexo);
@@ -48,5 +50,11 @@ public class Main {
         System.out.println("Delta: "+s.delta());
         System.out.println("Raiz 1: "+s.raiz1());
         System.out.println("Raiz 2: "+s.raiz2());
+
+        pt.abrir();
+        pt.fechar();
+        pt.abrir();
+        pt.abrir();
+        System.out.println(pt.mostrar());
     }
 }

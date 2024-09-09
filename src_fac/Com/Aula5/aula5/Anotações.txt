@@ -1,0 +1,13 @@
+RELACIONAMENTO ENTRE CLASSES:
+
+Has-many(tem vários): é uma revisão ao qual uma classe
+A possui várias referencias a uma classe B.
+
+Ex: Em uma loja on-line vende-se produtos de
+técnologia, escritório ou alimentícios.
+Um cliente nessa lija possui um carrinho de
+compras com os produtos desejados. Todo produto
+possui nome, tipo e preço. O carrinho pode listar
+os produtos, calcular o total a pagar, calcular
+o total a pagar por tipo e inserir buscar e 
+remover produtos.
