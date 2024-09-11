@@ -3,7 +3,6 @@ package com.aula5;
 import java.util.ArrayList;
 
 public class CarrinhoD {
-    
 
     private ArrayList<Produto> produtos;
 
@@ -21,22 +20,24 @@ public class CarrinhoD {
 
     public void listar(){
         for(Produto p : produtos){
-            if(p != null){p.mostrar();}            
+            if (p != null)
+                p.mostrar();
         }
     }
 
     public void buscarPorNome(String nome){
         for(Produto p : produtos){
-            if(p != null)
+            if (p != null)
                 if(p.getNome() == nome)
-                    p.mostrar();           
+                    p.mostrar();
         }
     }
-    //Exercício: implementar os outros dois.
+
+    //Exercicio implementar os outros dois.
     public double calcularTotal(){
         double total = 0;
         for(Produto p : produtos){
-            if(p != null){
+            if (p != null){
                 total = total + p.getPreco();
             }
         }
@@ -46,12 +47,11 @@ public class CarrinhoD {
     public double calcularTotalTipo(TipoProduto tipo){
         double total = 0;
         for(Produto p : produtos){
-            if(p != null){
-                if(p.verificarTipo(tipo))
+            if (p != null){
+                if (p.verificarTipo(tipo))
                     total = total + p.getPreco();
             }
         }
         return total;
     }
-
 }

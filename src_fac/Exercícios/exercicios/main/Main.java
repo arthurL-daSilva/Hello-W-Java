@@ -1,3 +1,5 @@
+import com.aula5.Sapo;
+
 import exercicios.exe1.Churrasco;
 import exercicios.exe1.Pessoa;
 import exercicios.exe2.Estado;
@@ -7,6 +9,7 @@ import exercicios.exe5.Triangulo;
 import exercicios.exe6.Enigma;
 import exercicios.exe7.Eq2Grau;
 import exercicios.exe8.Porta;
+import exercicios.exe9.Transferencia;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,5 +59,11 @@ public class Main {
         pt.abrir();
         pt.abrir();
         System.out.println(pt.mostrar());
+        
+        Cliente c1 = new Cliente("josesvaldo", 1500, 20000);
+        Cliente c2 = new Cliente("Fabio", 2000, 20000);
+        Transferencia tr = new Transferencia();
+
+        tr.transferir(c1, c2, 500);
     }
 }

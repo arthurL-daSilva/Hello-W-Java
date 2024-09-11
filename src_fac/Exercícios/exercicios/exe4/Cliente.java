@@ -2,8 +2,8 @@ package exercicios.exe4;
 
 public class Cliente {
 
-    String nome;
-    double saldo, limite;
+    private String nome;
+    private double saldo, limite;
 
     public Cliente(String nome, double saldo, double limite){
         this.nome = nome;
@@ -23,11 +23,16 @@ public class Cliente {
     }
 
     public void checarSaldo(){
+        //System.out.println("Seu saldo: "+(saldo+limite));
         System.out.println("Seu saldo: "+saldo);
         System.out.println("Seu limite: "+limite);
     }
 
     public String obterNome(){
         return nome;
+    }
+
+    public double getSaldo(){
+        return saldo;
     }
 }
