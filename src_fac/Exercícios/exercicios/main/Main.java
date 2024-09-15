@@ -1,5 +1,3 @@
-import com.aula5.Sapo;
-
 import exercicios.exe1.Churrasco;
 import exercicios.exe1.Pessoa;
 import exercicios.exe2.Estado;
@@ -10,10 +8,11 @@ import exercicios.exe6.Enigma;
 import exercicios.exe7.Eq2Grau;
 import exercicios.exe8.Porta;
 import exercicios.exe9.Transferencia;
+import exercicios.exe10.Casa;
 
 public class Main {
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) throws Exception {
+        /* 
         Pessoa p = new Pessoa("Luana", "F", 5, true);
         Churrasco c = new Churrasco();
         Lampada l = new Lampada(Estado.OFF);
@@ -22,6 +21,9 @@ public class Main {
         Enigma e = new Enigma(52);
         Eq2Grau s = new Eq2Grau(20, 1, 6);
         Porta pt = new Porta(false);
+        Cliente c1 = new Cliente("David", 1500, 10000);
+        Cliente c2 = new Cliente("Fabio", 2000, 10000);
+        Transferencia tr = new Transferencia();
         
         System.out.println("Nome: "+p.nome);
         System.out.println("Sexo: "+p.sexo);
@@ -60,10 +62,19 @@ public class Main {
         pt.abrir();
         System.out.println(pt.mostrar());
         
-        Cliente c1 = new Cliente("josesvaldo", 1500, 20000);
-        Cliente c2 = new Cliente("Fabio", 2000, 20000);
-        Transferencia tr = new Transferencia();
 
         tr.transferir(c1, c2, 500);
+        */
+
+        Casa home = new Casa("Rosa", 4);
+        
+        home.abrirPorta(1);
+        home.abrirPorta(2);
+        home.fecharPorta(1);
+        home.abrirPorta(3);
+        home.abrirPorta(4);
+        home.fecharPorta(3);
+        home.fecharPorta(4);
+        System.out.println("Número de portas abertas: "+home.MostrarPortasAbertas());
     }
 }
