@@ -9,6 +9,8 @@ import exercicios.exe7.Eq2Grau;
 import exercicios.exe8.Porta;
 import exercicios.exe9.Transferencia;
 import exercicios.exe10.Casa;
+import exercicios.exe11.Apartamento;
+import exercicios.exe11.Edificio;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -24,6 +26,7 @@ public class Main {
         Cliente c1 = new Cliente("David", 1500, 10000);
         Cliente c2 = new Cliente("Fabio", 2000, 10000);
         Transferencia tr = new Transferencia();
+        Casa home = new Casa("Rosa", 4);
         
         System.out.println("Nome: "+p.nome);
         System.out.println("Sexo: "+p.sexo);
@@ -61,12 +64,8 @@ public class Main {
         pt.abrir();
         pt.abrir();
         System.out.println(pt.mostrar());
-        
-
+    
         tr.transferir(c1, c2, 500);
-        */
-
-        Casa home = new Casa("Rosa", 4);
         
         home.abrirPorta(1);
         home.abrirPorta(2);
@@ -76,5 +75,14 @@ public class Main {
         home.fecharPorta(3);
         home.fecharPorta(4);
         System.out.println("Número de portas abertas: "+home.MostrarPortasAbertas());
+        */
+
+        Edificio edi = new Edificio(1);
+        Apartamento apt1 = new Apartamento(52, 1);
+        Apartamento apt2 = new Apartamento(52, 1);
+
+        edi.adicionar(1, apt1);
+        edi.adicionar(1, apt2);
+        edi.listar();
     }
 }
