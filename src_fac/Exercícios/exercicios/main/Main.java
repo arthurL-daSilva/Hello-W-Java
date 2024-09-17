@@ -77,12 +77,16 @@ public class Main {
         System.out.println("Número de portas abertas: "+home.MostrarPortasAbertas());
         */
 
-        Edificio edi = new Edificio(1);
-        Apartamento apt1 = new Apartamento(52, 1);
+        Edificio edi = new Edificio(2);
+        Apartamento apt1 = new Apartamento(51, 1);
         Apartamento apt2 = new Apartamento(52, 1);
+        Apartamento apt3 = new Apartamento(53, 1);
+        Apartamento apt4 = new Apartamento(54, 2);
 
         edi.adicionar(1, apt1);
         edi.adicionar(1, apt2);
+        edi.adicionar(1, apt3);
+        edi.adicionar(2, apt4);
         edi.listar();
     }
 }

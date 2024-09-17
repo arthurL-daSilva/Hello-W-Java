@@ -2,39 +2,40 @@ package exercicios.exe11;
 
 public class Edificio {
     private int predios, qtAtual;
-    private int[] edificio;
-    private Apartamento[] apartamentos;
+    private Apartamento[][] apartamentos;
     private final static int MAX_APT = 3;
 
     public Edificio(int predios){
         this.predios = predios;
-        apartamentos = new Apartamento[MAX_APT];
-        edificio = new int[predios];
+        apartamentos = new Apartamento[MAX_APT][predios];
     }
 
     public void adicionar(int num_edificio, Apartamento apart) throws Exception{            
-        if(qtAtual >= MAX_APT){throw new Exception("Máximo de 3 apartamentos atingido!");}
-        apartamentos[qtAtual] = apart;
-        qtAtual++;
-        /* 
-        if (apartamentos[0].getNumApartamento() == apartamentos[1].getNumApartamento() ||
-            apartamentos[0].getNumApartamento() == apartamentos[2].getNumApartamento() ||
-            apartamentos[1].getNumApartamento() == apartamentos[2].getNumApartamento())
-            {throw new Exception("Apartamento de mesmo número ja existente!");}
-        FUNÇÃO DE COMPARAÇÃO NÃO FUNCIONANDO!!
-        */
-    }
-
-    public void listar(){
-        for(int i=0; i < qtAtual; i++){
-            apartamentos[i].mostrar();
+        if(apartamentos[MAX_APT-1][num_edificio-1] != null){throw new Exception("Máximo de 3 apartamentos atingido!");}
+        if(apartamentos[0][num_edificio-1] == null && qtAtual != 0){qtAtual = 0;}
+        if(apartamentos[qtAtual][num_edificio-1] == null){
+            apartamentos[qtAtual][num_edificio-1] = apart;
+            qtAtual++;
         }
+    }
+        
+        
+    public void listar(){
+        for(int j = 0; j < predios; j++){
+            for(int i=0; i < MAX_APT; i++){
+                if(apartamentos[i][j] != null)
+                    apartamentos[i][j].mostrar();
+            }
+        }
+        
     }
 
     public void buscarApart(int num_apartamento){
-        for(int i = 0; i < qtAtual; i++){
-            if(apartamentos[i].getNumApartamento() == num_apartamento){
-                apartamentos[i].mostrar();
+        for(int j = 0; j < predios; j++){
+            for(int i = 0; i < qtAtual; i++){
+                if(apartamentos[i][j].getNumApartamento() == num_apartamento){
+                    apartamentos[i][j].mostrar();
+                }
             }
         }
     }
